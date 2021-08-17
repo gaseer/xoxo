@@ -1,64 +1,25 @@
-<style>
-        :root {
-  --text: #dbdfac;
-  --bg: #2a1e5c;
-  --btn-bg: #d7f171;
+:root {
+  --cell-size: 80px;
+  --border: 1px solid black;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+table {
+  border-collapse: collapse;
+  margin-bottom: 1em;
 }
 
-body {
-  color: var(--text);
-  background-color: var(--bg);
-  font-family: 'Nerko One', cursive;
+td {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  text-align: center;
+  line-height: var(--cell-size);
+  font-size: calc(var(--cell-size) / 2);
 }
 
-h1 {
-  font-size: 80px;
-  margin-bottom: 0;
-  text-transform: uppercase;
+td + td {
+  border-left: var(--border);
 }
 
-.container {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+tr + tr td {
+  border-top: var(--border);
 }
-
-#board {
-  width: 60vw;
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 100px;
-  margin-top: 40px;
-}
-
-.box {
-  height: 20vh;
-  width: 20vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--text);
-}
-
-#restart {
-  padding: 10px 20px;
-  background-color: var(--btn-bg);
-  border: none;
-  border-radius: 20px;
-  color: var(--bg);
-  font-size: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  text-transform: uppercase;
-}
-
-    </style>
